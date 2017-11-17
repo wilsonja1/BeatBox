@@ -4,6 +4,16 @@ public class Sound {
     private String mAssetPath;
     private String mName;
 
+    public Integer getSoundId() {
+        return mSoundId;
+    }
+
+    public void setSoundId(Integer soundId) {
+        mSoundId = soundId;
+    }
+
+    private Integer mSoundId;
+
     public Sound(String assetPath){
         mAssetPath = assetPath;
         String[] components = assetPath.split("/");
@@ -11,11 +21,13 @@ public class Sound {
         mName = filename.replace(".wav", "");
     }
 
-    public String etAssetPath(){
+    public String getAssetPath(){
         return mAssetPath;
     }
 
     public String getName(){
         return mName;
     }
+
+
 }
